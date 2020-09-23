@@ -1,0 +1,252 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  padding: 0px;
+  margin: 0;
+  line-height: 1.6;
+}
+.main {
+  height: 100vh;
+  background: white;
+  margin: 20px 40px;
+  position: relative;
+
+  nav {
+    background: #f6f6f7;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      flex-direction: row-reverse;
+    }
+
+    .nav-links li {
+      padding: 5px;
+      //   padding-left: 70rem;
+      padding-right: 10rem;
+      font-size: 12px;
+      color: #888888;
+    }
+    .nav-links li:hover span {
+      display: none;
+    }
+
+    .nav-links li .fa {
+      display: none;
+    }
+
+    .nav-links li:hover .fa {
+      display: inline;
+    }
+  }
+
+  .cartlist {
+    display: none;
+    position: absolute;
+    right: 10rem;
+    top: 25px;
+    z-index: 2;
+    width: auto;
+    height: auto;
+
+    background: white;
+    border-right: 2px solid #cccccc;
+    border-left: 2px solid #cccccc;
+    border-bottom: 2px solid #cccccc;
+    padding: 20px;
+
+    .cart {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      display: flex;
+      flex-direction: row;
+
+      .pics {
+        width: auto; /* Full width */
+        height: auto; /* Full height */
+      }
+
+      .detail {
+        padding-left: 20px;
+        padding-right: 5rem;
+      }
+    }
+  }
+
+  .content {
+    padding: 20px 15rem;
+    margin: 0 -15px;
+    display: flex;
+    flex-direction: row;
+
+    img {
+      padding-left: 40px;
+    }
+
+    hr {
+      border-top: 1px #888888;
+    }
+
+    .description {
+      padding-left: 10rem;
+
+      .teename {
+        font-size: 20px;
+        font: weight 100;
+        padding-bottom: 20px;
+      }
+
+      .price {
+        font-weight: bold;
+        font-size: 12px;
+      }
+
+      .detail {
+        font-size: 13px;
+        color: #888888;
+        padding-top: 20px;
+      }
+
+      .size {
+        p {
+          padding-top: 20px;
+          font-weight: bold;
+          font-size: 12px;
+          color: #888888;
+          padding-bottom: 10px;
+        }
+
+        button {
+          border: 2px solid #888888;
+          background: white;
+          color: #888888;
+          padding: 10px;
+          width: 40px;
+        }
+
+        button:hover {
+          border: 3px solid black;
+          cursor: pointer;
+        }
+      }
+      .submitCart {
+        padding-top: 10px;
+
+        button {
+          border: 2px solid #888888;
+          background: white;
+          color: #888888;
+          padding: 10px;
+          font-weight: bold;
+          transition: 0.2s;
+        }
+        button:hover {
+          background: black;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1291px) {
+  .main {
+    height: auto;
+    background: white;
+    margin: 0px;
+
+    nav {
+      background: #f6f6f7;
+
+      .nav-links {
+        display: flex;
+        list-style: none;
+        flex-direction: row-reverse;
+      }
+
+      .nav-links li {
+        padding: 5px;
+        padding-left: 0;
+        padding-right: 20px;
+        font-size: 12px;
+        color: #888888;
+      }
+      .nav-links li span {
+        display: none;
+      }
+
+      .nav-links li .fa {
+        display: inline;
+      }
+
+      .nav-links li:active .fa {
+        display: none;
+      }
+      .nav-links li:active span {
+        display: inline;
+      }
+    }
+
+    .cartlist {
+      right: 20px;
+    }
+
+    .content {
+      padding: 0px 0rem;
+      margin: 0 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        padding: 20px;
+        max-width: 80%;
+        height: auto;
+      }
+
+      hr {
+        border-top: 1px #888888;
+      }
+
+      .description {
+        padding-left: 20px;
+
+        .price {
+          font-size: 18px;
+        }
+
+        .detail {
+          font-size: 12px;
+        }
+
+        .size {
+          p {
+            font-size: 18px;
+          }
+
+          button {
+            width: 15%;
+          }
+        }
+        .submitCart {
+          padding-top: 15px;
+          padding-bottom: 15px;
+
+          button {
+            border: 2px solid #888888;
+            background: white;
+            color: #888888;
+            padding: 10px;
+            width: 45%;
+          }
+        }
+      }
+    }
+  }
+}
